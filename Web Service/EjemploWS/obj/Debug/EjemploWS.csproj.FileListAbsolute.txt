@@ -1,0 +1,19 @@
+E:\unach\Taller de Desarrollo III\Ejemplos\ciclo_ene-may_2020\Microsoft\EjemploWS\bin\EjemploWS.dll
+E:\unach\Taller de Desarrollo III\Ejemplos\ciclo_ene-may_2020\Microsoft\EjemploWS\bin\EjemploWS.pdb
+E:\unach\Taller de Desarrollo III\Ejemplos\ciclo_ene-may_2020\Microsoft\EjemploWS\obj\Debug\EjemploWS.dll
+E:\unach\Taller de Desarrollo III\Ejemplos\ciclo_ene-may_2020\Microsoft\EjemploWS\obj\Debug\EjemploWS.pdb
+E:\unach\Taller de Desarrollo III\Ejemplos\ciclo_ene-may_2020\Microsoft\EjemploWS\obj\Debug\EjemploWS.csprojResolveAssemblyReference.cache
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\obj\Debug\EjemploWS.csprojAssemblyReference.cache
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\obj\Debug\EjemploWS.csproj.CoreCompileInputs.cache
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\obj\Debug\EjemploWS.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\obj\Debug\EjemploWS.pdb
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\EjemploWS.dll.config
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\EjemploWS.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\EjemploWS.pdb
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\MySql.Data.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\Google.Protobuf.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\BouncyCastle.Crypto.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\Ubiety.Dns.Core.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\Renci.SshNet.dll
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\bin\MySql.Data.xml
+C:\Users\itoma\Documents\Ejemplos\Microsoft\EjemploWS\obj\Debug\EjemploWS.csproj.CopyComplete

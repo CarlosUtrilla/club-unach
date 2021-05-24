@@ -1,0 +1,298 @@
+@font-face {
+       font-family: 'Roboto Black';
+       src: url('Roboto-Black.ttf');
+}
+@font-face {
+       font-family: 'Roboto Black Italic';
+       src: url('Roboto-BlackItalic.ttf');
+}
+@font-face {
+       font-family: 'Roboto Bold';
+       src: url('Roboto-Bold.ttf');
+}
+@font-face {
+       font-family: 'Roboto Bold Italic';
+       src: url('Roboto-BoldItalic.ttf');
+}
+@font-face {
+       font-family: 'Roboto Italic';
+       src: url('Roboto-Italic.ttf');
+}
+@font-face {
+       font-family: 'Roboto Light';
+       src: url('Roboto-Light.ttf');
+}
+
+@font-face {
+       font-family: 'Roboto Medium';
+       src: url('Roboto-Medium.ttf');
+}
+@font-face {
+       font-family: 'Roboto Medium Italic';
+       src: url('Roboto-MediumItalic.ttf');
+}
+@font-face {
+       font-family: 'Roboto';
+       src: url('Roboto-Regular.ttf');
+}
+@font-face {
+       font-family: 'Roboto Thin';
+       src: url('Roboto-Thin.ttf');
+}
+@font-face {
+       font-family: 'Roboto Thin Italic';
+       src: url('Roboto-ThinItalic.ttf');
+}
+
+
+
+#AnchorPane{
+     -fx-font-family: 'Roboto'; 
+}
+#AnchorPaneTicket{
+    -fx-background-color: #00124d;
+    -fx-background-image: url("../img/fondo.png");
+    -fx-background-repeat:   stretch;   
+    -fx-background-size: 459 579;
+    -fx-background-position: center center;
+    
+}
+.label{
+    -fx-font-family: 'Roboto'; 
+}
+#LabelInfo{
+    -fx-font-family: 'Roboto Light'; 
+    
+}
+.scroll-pane{
+    -fx-effect: dropshadow(two-pass-box, rgb(75,75,75), 5, 0, 0.1, 2);
+}
+.scroll-pane .viewport{
+    -fx-background-color: white;
+}
+/*Area del Tab Pane */
+.tab {
+  -fx-pref-width: 85;
+  -fx-pref-height:85;
+  -fx-text-base-color: #fff;
+  -fx-text-base: bold;
+  -fx-font-size: 18;
+  -fx-background-color:#fb8c00 ;
+  -fx-cursor:hand;
+}
+
+.jfx-tab-pane .tab-selected-line {
+    -fx-background-color: #ffbd45;
+    -fx-pref-height: 4;
+}
+.tab:selected{
+   -fx-background-color:#fb8c00 ;   
+   -fx-orientation: horizontal;
+   
+}
+.tab .tab-label{
+    -fx-text-fill: transparent;
+    -fx-padding:0 0 0 0;
+    -fx-rotate: 90; 
+    -fx-content-display:center;
+    -fx-wrap-text: true
+    
+}
+.tab:hover .tab-label{
+    -fx-text-fill: white;
+    -fx-content-display:  top;
+}
+.tab-header-background {
+  -fx-background-color:#fb8c00 ;
+}
+
+
+.tab-content-area {
+-fx-bacground-color:white;
+-fx-background-image: url("../img/fondo.png");
+-fx-background-position: 0,0;
+-fx-background-size: 900,510;
+-fx-border-radius: 0px;
+-fx-background-radius: 0px;
+}
+
+
+#PaneSuperior{
+    -fx-background-color:  rgba(85, 85, 85, 0.7);
+}
+#Formulario{
+    
+    -fx-border-color: #fb8c00;
+    -fx-border-width: 2px; 
+    -fx-border-insets: -1px;
+}
+/* Text fields y text area */
+.text-field{
+    
+    -jfx-focus-color:#4CAF50;
+    -jfx-label-float: true;
+}
+
+
+/*Tablas */
+.table-view{
+    -fx-background-radius: 7 7 0 0;
+    -fx-background-color: #b0bec5;    
+}
+
+.table-view .label{
+    -fx-text-fill: black;
+    -fx-font-size: 18;
+}
+.table-view .column-header-background{
+    -fx-background-color: #808e95;
+   -fx-background-radius: 7 7 0 0 ;
+   -fx-padding: 3 0 3 0;
+
+
+}
+.table-view .column-header, .table-view .filler {
+    -fx-size: 30px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color: transparent;
+   
+}
+.table-view .column-header .label{
+    
+    -fx-text-fill:  derive(black, 20%);
+    -fx-font-size: 14;
+    
+}
+.table-view .column-header .column-resize-line{
+    -fx-border-color: white;
+}
+
+.table-column{
+    -fx-text-fill: derive(black, 20%);;
+    -fx-font-size: 13;
+    -fx-alignment: center;
+}
+
+.table-row-cell{
+    -fx-cell-size: 40px;
+    -fx-padding: 10 0 0 0;
+    -fx-background-color: -fx-table-cell-border-color, #b0bec5;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    
+}
+
+.table-row-cell:odd{
+    -fx-cell-size: 40px;
+    -fx-background-color: -fx-table-cell-border-color, derive(#b0bec5,20%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */  
+    
+}
+.table-row-cell:selected {
+    -fx-background-color: #c8e6c9;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background, 
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+.table-view > .virtual-flow > .scroll-bar > .increment-button, 
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+/*Botones*/
+.button,.jfx-button .jfx-rippler{
+    -fx-cursor: hand;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill:white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+    -jfx-rippler-fill:#4d4d4d;
+    -fx-font-family: 'Roboto'; 
+}
+
+.button:hover{
+    -fx-effect: dropshadow(two-pass-box, rgb(48,112,50), 3, 0, 0.1, 2);
+}
+#BotonAbrirForm{
+    -fx-background-color: #4CAF50;
+}
+#BotonVenta{    
+    -fx-font-size: 15;
+    -fx-background-color: #F57C00;
+}
+#BotonVenta:hover{
+    -fx-effect: dropshadow(two-pass-box, rgb(117,59,0), 3, 0, 0.1, 2);
+}
+
+
+#BotonCerrar{
+    -fx-text-fill: black;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: transparent;
+}
+#BotonCerrar:hover{
+    -fx-background-color: #BDBDBD;
+    -fx-effect: dropshadow(two-pass-box, rgb(255,255,255), 0, 0, 0.1, 0);
+}
+#BotonRegresar{ 
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: transparent;
+    -jfx-rippler-fill:#4CAF50;
+}
+#BotonRegresar:hover{
+    -fx-effect: dropshadow(two-pass-box, rgb(255,255,255), 3, 0, 0.1, 2);
+}
+#BotonImagen{
+    
+    -fx-font-family: 'Roboto Light'; 
+    -fx-font-weight:  normal;
+    -fx-content-display: top;
+    -fx-opacity: 0.80;
+    -fx-text-fill: black;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: transparent;
+    -jfx-rippler-fill:#4CAF50;
+}
+#BotonImagen:hover{
+     -fx-effect: dropshadow(two-pass-box, rgb(255,255,255), 3, 0, 0.8, 2);
+}
+#BotonForm{
+    -fx-content-display:center;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: black;
+    -fx-font-size:21;
+}
+#BotonEdit{
+    -fx-opacity: 0.50;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -jfx-rippler-fill:#4CAF50;    
+}
+#BotonEdit:hover{
+    -fx-opacity: 0.87;
+    -fx-text-fill: #000;
+    -fx-effect:  innershadow;
+     
+}
+#BotonForm:hover{
+    -fx-effect: dropshadow(two-pass-box, rgb(11,11,11), 3, 0, 0.1, 1);
+}
+#PaneCarga{
+    -fx-background-color: rgba(75, 75, 75, 0.8);
+}
+

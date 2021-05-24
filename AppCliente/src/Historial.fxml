@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPaneTicket" prefHeight="579.0" prefWidth="459.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HistorialController">
+    <stylesheets>
+        <URL value="@Estilos/Main.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane fx:id="Pane" hbarPolicy="NEVER" layoutX="90.0" layoutY="131.0" prefHeight="424.0" prefWidth="280.0" style="-fx-background-color: #fff; -fx-padding: 15 20 15 10;">
+         <content>
+            <Text fx:id="ticket" fontSmoothingType="LCD" lineSpacing="2.0" strokeLineCap="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="CLUB UNACH ================================ Dirección: Blvd. Belisario Domínguez, Sin Nombre, Teran 29050, Tuxtla Gutiérrez, Chis. Rector: Carlos Faustino Natarén Nandayapa Teléfono: 961 615 0440 18:08:07 25/05/2020 ================================ CANT. ARTICULO PRE.UNIT TOTAL 1 Rufles $13 $13 ================================ TOTAL DE COMPRA $13 NOMBRE DEL CLIENTE: Carlos Abraham Utrilla Zapoteco !DISFRUTE SU COMPRA¡. VUELVA PRONTO ================================ POR LA CONCIENCIA DE LA NECECIDAD DE SERVIR" textAlignment="CENTER" wrappingWidth="260.0" />
+         </content>
+      </ScrollPane>
+      <Label layoutX="115.0" layoutY="31.0" style="-fx-font-size: 24; -fx-font-weight: Bold;" text="Tickets de compras" textFill="#000000de" />
+      <JFXButton id="BotonRegresar" fx:id="BtnAnt" alignment="CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="65.0" onMouseClicked="#Ant" prefHeight="10.0" prefWidth="29.0" style="-fx-text-fill: transparent;" text="." visible="false">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/ant.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton id="BotonRegresar" fx:id="BtnSig" alignment="CENTER" contentDisplay="CENTER" layoutX="235.0" layoutY="65.0" onMouseClicked="#Sig" prefHeight="10.0" prefWidth="29.0" style="-fx-text-fill: transparent;" text=".">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/sig.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="TxtTicket" alignment="CENTER" layoutX="141.0" layoutY="105.0" prefHeight="19.0" prefWidth="183.0" style="-fx-font-size: 15; -fx-font-weight: Light; -fx-font-family: Roboto Light;" text="Ticket 1 de 6" />
+      <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="329.0" layoutY="25.0" opacity="0.87" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/historial.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

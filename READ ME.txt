@@ -1,0 +1,6 @@
+NOTA1: Para que usted pueda correr el proyetco primero asegurese de agregar las librerias al proyecto, son la de animateFX y Jfoenix
+
+NOTA2: En la app cliente puede crear un usuario (para tener la experiencia completa de la app) o usar la cuenta con mi numero de telefono
+
+telefono:9612830447
+contraseña: 12345

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="495.0" prefWidth="339.0" style="-fx-background-color: white;" stylesheets="@Estilos/Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SesionController">
+   <children>
+      <JFXTabPane fx:id="TabRoot" layoutY="130.0" prefHeight="398.0" prefWidth="339.0">
+         <tabs>
+            <Tab fx:id="InicioTab" text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="290.0" prefWidth="339.0">
+                     <children>
+                        <Label layoutX="100.0" layoutY="26.0" text="Iniciar Sesión" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="CENTER" layoutX="75.0" layoutY="59.0" prefHeight="41.0" prefWidth="194.0" text="Por favor, ingresa tus datos para iniciar sesión y continuar a la tienda" textAlignment="CENTER" textFill="#000000a3" wrapText="true" />
+                        <JFXButton layoutX="112.0" layoutY="216.0" onMouseClicked="#IniciarSesion" prefHeight="41.0" prefWidth="115.0" text="Iniciar Sesión" />
+                        <JFXTextField fx:id="TxtUsuario" layoutX="89.0" layoutY="124.0" prefHeight="25.0" prefWidth="194.0" promptText="Correo ó Telefono" />
+                        <JFXPasswordField fx:id="TxtPassword" layoutX="89.0" layoutY="169.0" onKeyPressed="#KeyPassword" prefHeight="25.0" prefWidth="194.0" promptText="Contraseña" />
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="58.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/userp.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="56.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/password.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="139.0" layoutY="270.0" onMouseClicked="#CrearCuenta" text="Registrarse" textFill="#457ff2" underline="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="RegistroTab" text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="339.0">
+                     <children>
+                        <JFXTextField fx:id="TxtNombre" layoutX="88.0" layoutY="68.0" prefHeight="25.0" prefWidth="195.0" promptText="Nombre" />
+                        <Label layoutX="54.0" layoutY="27.0" text="Formulario de registro" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="TxtTelefono" layoutX="88.0" layoutY="107.0" prefHeight="25.0" prefWidth="195.0" promptText="Telefono" />
+                        <JFXTextField fx:id="TxtDireccion" layoutX="88.0" layoutY="145.0" prefHeight="25.0" prefWidth="195.0" promptText="Direccion" />
+                        <JFXTextField fx:id="TxtCorreo" layoutX="88.0" layoutY="183.0" prefHeight="25.0" prefWidth="195.0" promptText="Correo electronico" />
+                        <JFXButton layoutX="120.0" layoutY="267.0" onMouseClicked="#Registrarse" prefHeight="38.0" prefWidth="99.0" text="Registrarse" />
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="57.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/userp.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="57.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/phone.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="57.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/location.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="57.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/email.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="57.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/password.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton id="BotonRegresar" ellipsisString="" layoutX="19.0" layoutY="17.0" onMouseClicked="#Regresar" prefHeight="25.0" prefWidth="29.0" style="-fx-background-color: white; -fx-background-radius: 50px; -fx-border-radius: 50px;" text=" " />
+                        <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="19.0" layoutY="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/return.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="TxtContraseña" layoutX="88.0" layoutY="222.0" prefHeight="25.0" prefWidth="195.0" promptText="Contraseña" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <ImageView fitHeight="233.0" fitWidth="339.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/Club%20Unach.jpg" />
+         </image>
+      </ImageView>
+      <Pane id="PaneCarga" fx:id="PantallaCarga" prefHeight="528.0" prefWidth="339.0" visible="false">
+         <children>
+            <JFXSpinner layoutX="145.0" layoutY="239.0" startingAngle="146.0" />
+            <Label layoutX="127.0" layoutY="298.0" text="Cargando..." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

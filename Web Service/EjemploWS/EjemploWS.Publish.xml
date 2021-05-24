@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="E:\unach\Taller de Desarrollo III\Ejemplos\ciclo_ene-may_2020\Microsoft\EjemploWS\publicar" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/EjemploWS.pdb" publishTime="04/23/2020 23:44:01" />
+    <file relUrl="Ejemplo.asmx" publishTime="04/20/2020 20:21:40" />
+    <file relUrl="bin/EjemploWS.dll" publishTime="04/23/2020 23:44:01" />
+    <file relUrl="Web.config" publishTime="04/20/2020 21:38:53" />
+  </publishProfile>
+</publishData>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="990.0" stylesheets="@Estilos/Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LauncherController">
+   <children>
+      <JFXTabPane fx:id="TbView" layoutY="54.0" prefHeight="513.0" prefWidth="990.0" side="LEFT" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="54.0">
+         <tabs>
+            <Tab text="Inicio">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="210.0" layoutY="200.0" prefHeight="113.0" prefWidth="486.0" style="-fx-font-size: 35; -fx-font-weight: Bold;" text="Bienvenido de nuevo a Club Unach, tu tienda virtual" textAlignment="CENTER" textFill="#00124d" wrapText="true" />
+                        <JFXButton id="BotonImagen" buttonType="RAISED" contentDisplay="TOP" layoutX="200.0" layoutY="334.0" onMouseClicked="#SelectProduct" prefHeight="123.0" prefWidth="125.0" text="Ir a los productos " textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/boxG.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="BotonImagen" buttonType="RAISED" contentDisplay="TOP" layoutX="390.0" layoutY="334.0" onMouseClicked="#SelectCart" prefHeight="123.0" prefWidth="125.0" text="Ir a mi carrito de compras" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/shopcarG.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="BotonImagen" buttonType="RAISED" contentDisplay="TOP" layoutX="580.0" layoutY="334.0" onMouseClicked="#SelectUser" prefHeight="123.0" prefWidth="125.0" text="Ver y editar mi perfil" textAlignment="CENTER" wrapText="true">
+                           <graphic>
+                              <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/userG.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <ImageView fitHeight="185.0" fitWidth="185.0" layoutX="360.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/148.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab fx:id="TabProducto" text="Producto">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="838.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="312.0" layoutY="30.0" text="Productos" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="58.0" layoutY="100.0" opacity="0.87" preserveRatio="true">
+                           <image>
+                              <Image url="@img/search.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="658.0" layoutY="73.0" prefHeight="27.0" prefWidth="142.0" text="Añadir Producto" textAlignment="CENTER" textFill="#757575">
+                           <font>
+                              <Font name="Caviar Dreams" size="17.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="TablaProductos" editable="true" layoutX="50.0" layoutY="140.0" prefHeight="305.0" prefWidth="766.0">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="NombreCol" minWidth="180.0" prefWidth="200.0" text="Nombre" />
+                              <TableColumn fx:id="PrecioCol" minWidth="25.0" prefWidth="86.0" text="Precio" />
+                              <TableColumn fx:id="MarcaCol" minWidth="120.0" prefWidth="75.0" text="Marca" />
+                              <TableColumn fx:id="CantidadCol" minWidth="25.0" prefWidth="75.0" text="Cantidad" />
+                              <TableColumn fx:id="CodigoCol" minWidth="80.0" prefWidth="75.0" text="Codigo" />
+                           </columns>
+                        </TableView>
+                        <ImageView fitHeight="50.0" fitWidth="55.0" layoutX="504.0" layoutY="29.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/boxG.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="ProductoTxt" labelFloat="true" layoutX="96.0" layoutY="103.0" onKeyPressed="#BuscarProducto" prefHeight="25.0" prefWidth="245.0" promptText="Nombre de producto">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="CantidadCarritoTxt" labelFloat="true" layoutX="279.0" layoutY="466.0" prefHeight="30.0" prefWidth="103.0" promptText="Cantidad a agregar" text="0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton id="BotonEnviar" layoutX="395.0" layoutY="457.0" onMouseClicked="#AgregarCarrito" prefHeight="43.0" prefWidth="135.0" text="Agregar al carrito" />
+                        <JFXButton id="BotonForm" layoutX="708.0" layoutY="29.0" onMouseClicked="#AbrirFormProducto" prefHeight="43.0" prefWidth="44.0" text="+" />
+                        <Label layoutX="58.0" layoutY="451.0" style="-fx-font-size: 10;" text="*Doble click para editar un producto" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/box.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Carrito">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="523.0" prefWidth="843.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="250.0" layoutY="21.0" opacity="0.87" prefHeight="66.0" prefWidth="356.0" text="Carrito de compras" textAlignment="CENTER" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="64.0" fitWidth="55.0" layoutX="601.0" layoutY="26.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/shopcarG.png" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="TablaCarrito" layoutX="35.0" layoutY="115.0" prefHeight="330.0" prefWidth="482.0">
+                           <columns>
+                              <TableColumn fx:id="ProductoCarritoCol" minWidth="150.0" prefWidth="133.0" text="Producto" />
+                              <TableColumn fx:id="PrecioCarritoCol" minWidth="20.0" prefWidth="72.0" text="Precio C/U" />
+                              <TableColumn fx:id="CantidadCarritoCol" minWidth="20.0" prefWidth="82.0" text="Cantidad" />
+                              <TableColumn fx:id="TotalCarritoCol" prefWidth="75.0" text="Total" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <Pane layoutX="517.0" layoutY="115.0" prefHeight="328.0" prefWidth="354.0">
+                           <children>
+                              <Label fx:id="TotalLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="229.0" opacity="0.87" prefHeight="20.0" prefWidth="311.0" text="Total a pagar: $120.00" textAlignment="CENTER" textFill="#000000de">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="72.0" layoutY="14.0" style="-fx-font-size: 23;" text="Información de pago" textFill="#000000de">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton id="BotonVenta" layoutX="23.0" layoutY="271.0" onMouseClicked="#RealizarVenta" prefHeight="43.0" prefWidth="310.0" text="Comprar ahora" />
+                              <Label layoutX="36.0" layoutY="67.0" style="-fx-font-size: 16;" text="Nombre:" textFill="#000000de" />
+                              <Label id="LabelInfo" fx:id="LabelNombre" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="36.0" layoutY="87.0" prefHeight="43.0" prefWidth="142.0" style="-fx-font-size: 15;" text="Carlos Abraham Utrilla Zapoteco" textFill="#000000a3" wrapText="true" />
+                              <Label layoutX="178.0" layoutY="67.0" style="-fx-font-size: 16;" text="Dirección:" textFill="#000000de" />
+                              <Label id="LabelInfo" fx:id="LabelDireccion" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="178.0" layoutY="87.0" prefHeight="43.0" prefWidth="142.0" style="-fx-font-size: 15;" text="Av.Suchiapa #14, Col Los manguitos" textFill="#000000a3" wrapText="true" />
+                              <Label layoutX="36.0" layoutY="138.0" style="-fx-font-size: 16;" text="Teléfono:" textFill="#000000de" />
+                              <Label id="LabelInfo" fx:id="LabelTelefono" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="36.0" layoutY="158.0" prefHeight="43.0" prefWidth="114.0" style="-fx-font-size: 15;" text="9612830447" textFill="#000000a3" wrapText="true" />
+                              <Label layoutX="178.0" layoutY="138.0" style="-fx-font-size: 16;" text="Correo electrónico:" textFill="#000000de" />
+                              <Label id="LabelInfo" fx:id="LabelCorreo" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="178.0" layoutY="158.0" prefHeight="43.0" prefWidth="142.0" style="-fx-font-size: 15;" text="itoma.za.1@gmail.com" textFill="#000000a3" wrapText="true" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/shop.car.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="Usuario">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="519.0" prefWidth="799.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="213.0" layoutY="23.0" opacity="0.87" prefHeight="78.0" prefWidth="422.0" text="Información de usuario" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="64.0" fitWidth="55.0" layoutX="638.0" layoutY="37.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/userG.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="406.0" fitWidth="572.0" layoutX="167.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/userinf.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="107.0" opacity="0.87" prefHeight="20.0" prefWidth="80.0" text="ID Usuario:" textAlignment="CENTER" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LblId" alignment="BOTTOM_LEFT" layoutX="291.0" layoutY="107.0" opacity="0.87" prefHeight="20.0" prefWidth="65.0" text="123" textFill="#000000de">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LblTelefono" layoutX="224.0" layoutY="332.0" prefHeight="30.0" prefWidth="134.0" style="-fx-font-size: 21;" text="9612830447" textFill="#000000cc" />
+                        <Label fx:id="LblDireccion" layoutX="224.0" layoutY="379.0" prefHeight="30.0" prefWidth="453.0" style="-fx-font-size: 21;" text="Av. Suchiapa #17, Col Los Manguitos" textFill="#000000cc" />
+                        <Label fx:id="LblCorreo" layoutX="224.0" layoutY="427.0" prefHeight="30.0" prefWidth="453.0" style="-fx-font-size: 21;" text="itoma.za.1@gmail.com" textFill="#000000cc" />
+                        <Label layoutX="412.0" layoutY="178.0" style="-fx-font-size: 23;" text="Nombre de usuario:" />
+                        <Label fx:id="LblNombre" alignment="TOP_LEFT" layoutX="412.0" layoutY="207.0" prefHeight="80.0" prefWidth="253.0" style="-fx-font-size: 23;" text="Carlos Abraham Utrilla Zapoteco" textFill="#000000a3" wrapText="true" />
+                        <JFXButton id="BotonImagen" alignment="CENTER" contentDisplay="TOP" layoutX="625.0" layoutY="394.0" onMouseClicked="#AbrirHistorial" opacity="0.87" prefHeight="80.0" prefWidth="80.0" style="-fx-text-fill: #000;" text="Historial" textAlignment="CENTER">
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/historial.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton id="BotonEdit" contentDisplay="TOP" layoutX="665.0" layoutY="144.0" onMouseClicked="#AbrirFormUsuario" prefHeight="55.0" prefWidth="57.0" text="Editar">
+                           <graphic>
+                              <ImageView fitHeight="115.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/edit.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <ImageView fitHeight="54.0" fitWidth="990.0" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@img/1.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="FormProducto" prefHeight="566.0" prefWidth="903.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="Formulario" layoutX="329.0" layoutY="73.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="334.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="327.0">
+               <children>
+                  <JFXTextField fx:id="NombreProductoTxt" layoutX="40.0" layoutY="100.0" prefHeight="23.0" prefWidth="253.0" promptText="Nombre del producto" />
+                  <JFXTextField fx:id="MarcaTxt" layoutX="40.0" layoutY="150.0" prefHeight="23.0" prefWidth="253.0" promptText="Marca" />
+                  <JFXTextField fx:id="PrecioTxt" layoutX="40.0" layoutY="200.0" prefHeight="23.0" prefWidth="253.0" promptText="Precio" />
+                  <JFXTextField fx:id="CodigoTxt" layoutX="40.0" layoutY="250.0" prefHeight="23.0" prefWidth="253.0" promptText="Codigo" />
+                  <JFXTextField fx:id="CantidadTxt" layoutX="40.0" layoutY="300.0" prefHeight="23.0" prefWidth="253.0" promptText="Cantidad" />
+                  <Label fx:id="LblFormProducto" alignment="CENTER" layoutX="4.0" layoutY="35.0" prefHeight="30.0" prefWidth="323.0" style="-fx-font-family: Roboto Bold;" text="Agregar producto" textAlignment="CENTER" textFill="#000000de">
+                     <font>
+                        <Font name="Marlett" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="BotonRegresar" layoutX="289.0" layoutY="14.0" onMouseClicked="#CerrarFormProducto" prefHeight="25.0" prefWidth="30.0" style="-fx-text-fill: black;" text="X" />
+                  <JFXButton layoutX="50.0" layoutY="354.0" onMouseClicked="#SubirProducto" prefHeight="46.0" prefWidth="232.0" text="Terminar" />
+               </children>
+            </Pane>
+            <TextField fx:id="IdProductoTxt" layoutX="105.0" layoutY="50.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="FormUsuario" prefHeight="566.0" prefWidth="990.0" visible="false">
+         <children>
+            <Pane id="Formulario" layoutX="329.0" layoutY="73.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="334.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="53.0" AnchorPane.rightAnchor="327.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="6.0" layoutY="28.0" prefHeight="61.0" prefWidth="323.0" style="-fx-font-family: Roboto Bold;" text="Editar información del usuario" textAlignment="CENTER" textFill="#000000de" wrapText="true">
+                     <font>
+                        <Font name="Marlett" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="BotonRegresar" layoutX="289.0" layoutY="14.0" onMouseClicked="#CerrarFormUsuario" prefHeight="25.0" prefWidth="30.0" style="-fx-text-fill: black;" text="X" />
+                  <JFXButton layoutX="50.0" layoutY="354.0" onMouseClicked="#ActualizaUsuario" prefHeight="46.0" prefWidth="232.0" text="Terminar" />
+                  <JFXTextField fx:id="TxtNombre" layoutX="76.0" layoutY="106.0" prefHeight="25.0" prefWidth="210.0" promptText="Nombre" />
+                  <JFXTextField fx:id="TxtTelefono" layoutX="77.0" layoutY="151.0" prefHeight="25.0" prefWidth="210.0" promptText="Telefono" />
+                  <JFXTextField fx:id="TxtDireccion" layoutX="77.0" layoutY="196.0" prefHeight="25.0" prefWidth="210.0" promptText="Direccion" />
+                  <JFXTextField fx:id="TxtCorreo" layoutX="76.0" layoutY="241.0" prefHeight="25.0" prefWidth="210.0" promptText="Correo electronico" />
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="45.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/userp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="45.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/phone.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="45.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/location.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="45.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/email.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="45.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/password.png" />
+                     </image>
+                  </ImageView>
+                  <JFXPasswordField fx:id="TxtContraseña" layoutX="76.0" layoutY="286.0" prefHeight="25.0" prefWidth="210.0" promptText="Contraseña" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane id="PaneCarga" fx:id="PaneCarga" prefHeight="567.0" prefWidth="990.0" visible="false">
+         <children>
+            <JFXSpinner layoutX="455.0" layoutY="244.0" prefHeight="80.0" prefWidth="80.0" />
+            <Label layoutX="398.0" layoutY="342.0" style="-fx-font-size: 20;" text="Espere un momento..." textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
